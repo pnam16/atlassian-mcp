@@ -69,8 +69,9 @@ web_modules/
 # Output of 'npm pack'
 *.tgz
 
-# release artifacts
-release/
+# release artifacts (anchored: an unanchored release/ also hid src/tools/release/)
+/release/
+/packages/*/release/
 
 # Yarn Integrity file
 .yarn-integrity
@@ -138,3 +139,6 @@ dist
 
 # Cursor continual-learning hook state (local index / cache)
 .cursor/hooks/state/
+
+# CodeGraph local index
+.codegraph/

@@ -1,0 +1,32 @@
+{
+  "bin": {
+    "atlassian-self-mcp": "dist/index.js"
+  },
+  "description": "MCP server for Jira and Confluence Server/Data Center in one process",
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "conf-mcp": "workspace:*",
+    "esbuild": "^0.28.2",
+    "g-jira-mcp": "workspace:*"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "atlassian-self-mcp",
+  "repository": {
+    "directory": "packages/atlassian-self-mcp",
+    "type": "git",
+    "url": "git+https://github.com/pnam16/atlassian-mcp.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "prepare": "pnpm build",
+    "release": "release-it",
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}

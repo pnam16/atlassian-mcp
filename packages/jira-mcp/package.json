@@ -48,7 +48,7 @@
   },
   "scripts": {
     "build": "rsbuild build",
-    "prepare": "npm run build",
+    "prepare": "pnpm build",
     "release": "release-it",
     "start": "node src/index.js",
     "test": "node --test"

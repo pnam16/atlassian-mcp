@@ -1,0 +1,63 @@
+{
+  "bin": {
+    "conf-mcp": "dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "dotenv": "^16.6.1",
+    "markdown-it": "^14.3.3",
+    "zod": "^3.25.76"
+  },
+  "description": "MCP server for Confluence Server/Data Center (REST API)",
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.5",
+    "@types/node": "^26.6.6",
+    "esbuild": "^0.28.2",
+    "release-it": "^20.2.1",
+    "typescript": "^6.0.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "confluence",
+    "confluence-server",
+    "confluence-data-center",
+    "atlassian",
+    "rest-api",
+    "claude",
+    "claude-code",
+    "codex",
+    "gemini",
+    "cursor",
+    "windsurf",
+    "llm",
+    "ai",
+    "ai-tools",
+    "agent",
+    "wiki",
+    "knowledge-base",
+    "cql",
+    "confluence-api",
+    "server"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "conf-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnam16/gem-conf-mcp.git"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "lint": "biome migrate --write && biome check --write . && tsc --noEmit",
+    "prepare": "npm run build",
+    "release": "release-it",
+    "start": "node src/index.js",
+    "test": "node --test"
+  },
+  "type": "module",
+  "version": "1.5.0"
+}
